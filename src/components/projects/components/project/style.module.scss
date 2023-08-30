@@ -1,0 +1,25 @@
+$medium: 900px;
+
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  background-color: black;
+  position: relative;
+  cursor: alias;
+  gap: 3rem;
+  max-height: 200px;
+  margin-bottom: -5rem;
+
+  @media screen and (max-width: $medium) {
+    margin-bottom: 0;
+    padding: 8rem 5vw;
+  }
+
+  h2 {
+    font-size: 6.5vw;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,28 @@
+.introduction {
+  height: 100svh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  user-select: none;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+  }
+  p {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+}

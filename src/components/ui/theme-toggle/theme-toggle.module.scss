@@ -1,0 +1,34 @@
+.themeToggler {
+  --circle-w: 22px;
+  --circle-h: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--button-w);
+  height: var(--button-h);
+
+  span {
+    position: relative;
+    display: block;
+    width: var(--circle-w);
+    height: var(--circle-h);
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    transition: transform 0.35s ease;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      width: calc(var(--circle-w) / 2);
+      background: currentColor;
+      border-left: 1px solid currentColor;
+      border-radius: 0 calc(var(--circle-w) / 2) calc(var(--circle-w) / 2) 0;
+    }
+  }
+}

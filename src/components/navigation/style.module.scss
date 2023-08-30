@@ -1,0 +1,150 @@
+.header {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  top: 0;
+  color: currentColor;
+  padding: 1.5rem 5vw;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 300;
+  box-sizing: border-box;
+  align-items: center;
+
+  .logo {
+    color: currentColor;
+    display: flex;
+    cursor: pointer;
+    font-weight: 300;
+
+    p {
+      margin: 0;
+    }
+    .name {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 5px;
+      p {
+        position: relative;
+        &:nth-of-type(2) {
+          padding-left: 0.3em;
+        }
+        &:nth-of-type(3) {
+          position: absolute;
+          left: 120px;
+          padding-left: 0.3em;
+        }
+      }
+    }
+  }
+  .nav {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .el {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      height: 100%;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      color: currentColor;
+
+      &:hover {
+        .indicator {
+          transform: scale(1);
+        }
+      }
+      .indicatorActive {
+        width: 5px;
+        height: 5px;
+        top: 30px;
+        left: 50%;
+        background-color: currentColor;
+        border-radius: 50%;
+        transform: scale(1) translateX(-50%);
+        transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      .indicator {
+        width: 5px;
+        height: 5px;
+        top: 30px;
+        left: 50%;
+        background-color: currentColor;
+        border-radius: 50%;
+        transform: scale(0) translateX(-50%);
+        transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+}
+.headerButtonContainer {
+  transform: scale(0);
+  position: fixed;
+  right: 0;
+  bottom: 5px;
+  z-index: 100;
+
+  .button {
+    position: relative;
+    margin-top: 10px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .burger {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 80%;
+      margin: auto;
+      background-color: #e1dfdd;
+      position: relative;
+      transition: ease all 0.3s;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+}

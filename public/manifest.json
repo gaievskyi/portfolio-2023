@@ -1,0 +1,12 @@
+{
+  "name": "Daniel Gaievskyi",
+  "short_name": "Daniel G.",
+  "description": "Daniel Gaievskyi - top notch software development services",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "id": "/",
+  "scope": "/",
+  "start_url": "/"
+}

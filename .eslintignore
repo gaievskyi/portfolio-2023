@@ -1,0 +1,10 @@
+dist/*
+.cache
+public
+node_modules
+*.esm.js
+*.config.js
+*.config.*js
+env/*
+env
+.eslintrc.cjs

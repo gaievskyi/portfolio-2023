@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#e1dfdd] text-[#121212] dark:bg-[#121212] dark:text-[#e1dfdd];
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: progress;
+  position: relative;
+  transition: background-color 0.2s linear;
+  font-family:
+    "SF Pro",
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+section {
+  margin: 5vh 5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    margin: 2vh 5vw;
+  }
+}
+
+::selection {
+  background: #e1dfdd;
+  color: black;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 999;
+  background: currentColor;
+  transform-origin: 0%;
+}
+
+.link {
+  width: 15rem;
+  height: 15rem;
+  display: inline-block;
+  font: 200 1.55rem/1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.1175em;
+  word-spacing: 0.5rem;
+  text-decoration: none;
+}
+
+.link__svg {
+  width: 100%;
+  height: auto;
+  transform-box: fill-box;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0.05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.link__cloud {
+  transform-origin: 50% 50%;
+  animation: rotate normal infinite 60s linear;
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+.link__face,
+.link__arrow {
+  transform-origin: 50% 50%;
+  transition: transform 0.15s cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.link:hover .link__face,
+.link:hover .link__arrow {
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.link__arrow {
+  stroke-width: 0.075em;
+}
+
+.link__text {
+  animation: rotateReverse normal infinite 15s linear;
+  transform-origin: 50% 50%;
+}
+
+.link--alt {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}
+
+.parallax {
+  overflow: hidden;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  gap: 5vw;
+}
+
+.content_inner {
+  width: 100%;
+  margin: 0 5vw 30vh 5vw;
+  padding: 0 5vw;
+  color: currentColor;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    flex-flow: column wrap;
+    margin-bottom: 0;
+  }
+}
+
+.copy {
+  background: black;
+  min-height: 70svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10vw;
+  padding: 5vh 5vw;
+  border-bottom: 1px solid currentColor;
+
+  @media screen and (max-width: 768px) {
+    gap: 3vw;
+    padding: 0 5vw;
+  }
+}
+
+.copy h1 {
+  flex-basis: 50%;
+}
+
+.copy form {
+  flex-basis: 50%;
+}
+
+.fixed_footer {
+  width: 100%;
+  height: 150px;
+  background: inherit;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+
+  @media screen and (max-width: 768px) {
+    height: 75px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.nav li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 2rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 25%;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.col li:last-child {
+  font-weight: 500;
+}
+
+.col:last-child {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.copyright {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}

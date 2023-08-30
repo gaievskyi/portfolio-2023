@@ -1,0 +1,126 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100svh;
+    width: 100%;
+    background-color: black;
+
+    .title {
+      border-bottom: 2px solid #1a1a1a;
+      position: relative;
+
+      span {
+        display: flex;
+        align-items: center;
+
+        .imageContainer {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      h1 {
+        font-size: 8vw;
+        line-height: 1;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 8vw;
+        margin: 0px;
+        line-height: 1;
+        font-weight: 100;
+      }
+      .buttonContainer {
+        position: absolute;
+        left: calc(100% - 400px);
+        top: calc(100% - 75px);
+      }
+      .button {
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        p {
+          margin: 0px;
+          font-size: 16px;
+          font-weight: 400;
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      color: #ccc;
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+
+      div {
+        display: flex;
+        gap: 4rem;
+        align-items: flex-end;
+        p,
+        h3 {
+          margin: 0px;
+          cursor: pointer;
+        }
+        p {
+          &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: #e1dfdd;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        h3 {
+          color: grey;
+          cursor: default;
+          font-weight: 300;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.description {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    background-color: black;
+    display: flex;
+    gap: 10vw;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 25vh 5vw;
+
+    @media screen and (max-width: 900px) {
+      flex-wrap: wrap;
+      padding: 10vh 10vw;
+    }
+
+    p {
+      margin: 0px;
+      font-size: 3rem;
+      line-height: 1.4;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+
+      span {
+        margin-right: 5px;
+      }
+
+      .mask {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+      }
+    }
+  }
+}
