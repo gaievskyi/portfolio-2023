@@ -14,9 +14,9 @@ export const useSmoothScroll = () => {
     const lenis = new Lenis({
       smoothWheel: true,
       easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-      wheelMultiplier: 0.35,
+      wheelMultiplier: 0.5,
       normalizeWheel: true,
-      duration: 0.8,
+      duration: 1.5,
     })
 
     const raf = (time: number) => {

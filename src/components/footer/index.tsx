@@ -22,7 +22,7 @@ export const Footer = ({ temperature }: FooterProps) => {
     offset: ["start start", "end end"],
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], [500, 0])
+  const y = useTransform(scrollYProgress, [0, 1], [750, 0])
 
   const isLargeScreen = useMediaQuery("(min-width: 768px)")
   const isDesktopOnly = isDesktop && isLargeScreen

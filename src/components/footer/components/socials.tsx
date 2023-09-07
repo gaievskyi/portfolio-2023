@@ -9,7 +9,7 @@ type SocialsProps = {
 }
 
 export const Socials = ({ temperature }: SocialsProps) => (
-  <div className="flex flex-col w-full justify-between gap-2 md:gap-8 opacity-80 text-[0.75rem] md:text-sm pb-2">
+  <div className="flex flex-col w-full justify-between gap-2 md:gap-4 opacity-80 text-[0.75rem] md:text-sm">
     <Copy />
     <small>WORKING REMOTELY 💫 SINCE THE NEW NORMAL</small>
     <Weather temperature={temperature} />

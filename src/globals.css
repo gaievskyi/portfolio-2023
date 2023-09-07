@@ -3,8 +3,27 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: #dcff50;
+    --color-secondary: #7b61ff;
+    --color-heading: #f5f5f7;
+    --color-text: rgba(255, 255, 255, 0.6);
+    --color-background: #090909;
+  }
   body {
     @apply bg-[#e1dfdd] text-[#121212] dark:bg-[#121212] dark:text-[#e1dfdd];
+  }
+}
+
+@layer utilities {
+  /* This two helpers apply a -50% to the translate x/y, and add
+   * a --y/--x css variable to it. This util is only here to make writing this class
+   * a bit easier to read in the HTML :)   */
+  .translate-y-centered-offset {
+    @apply translate-y-[calc(-50%_+_var(--y))];
+  }
+  .translate-x-centered-offset {
+    @apply translate-x-[calc(-50%_+_var(--x))];
   }
 }
 
@@ -152,7 +171,7 @@ section {
 
 .content_inner {
   width: 100%;
-  margin: 0 5vw 30vh 5vw;
+  margin: 0 5vw 20vh 5vw;
   padding: 0 5vw;
   color: currentColor;
   margin-left: auto;
@@ -215,7 +234,7 @@ section {
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.5px;
-  line-height: 2rem;
+  line-height: 1rem;
 }
 
 .col {
